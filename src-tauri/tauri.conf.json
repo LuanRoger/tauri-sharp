@@ -1,10 +1,10 @@
 {
-  "$schema": "./gen/schemas/desktop-schema.json",
+  "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/tooling/cli/schema.json",
   "productName": "tauri-sharp",
   "version": "0.1.0",
   "identifier": "com.tauri-sharp.app",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "start /b dotnet run --project ./src-csharp/TauriSharp.csproj && npm run dev",
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
@@ -14,7 +14,8 @@
       {
         "title": "tauri-sharp",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "center": true
       }
     ],
     "security": {

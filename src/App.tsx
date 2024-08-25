@@ -24,11 +24,6 @@ function App() {
     setExecutionTime(end - start);
   }
 
-  function start() {
-    invoke("spawn_server")
-    console.log("Server started")
-  }
-
   return (
     <div className="container">
       <h1>Welcome to Tauri!</h1>
@@ -61,9 +56,6 @@ function App() {
         />
         <button type="submit" disabled={isLoading}>
           Greet
-        </button>
-        <button type="button" onClick={start}>
-          Start
         </button>
       </form>
 
