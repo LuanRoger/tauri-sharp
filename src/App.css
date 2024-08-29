@@ -5,6 +5,10 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafb);
 }
+.logo.csharp:hover {
+  filter: drop-shadow(0 0 2em #68217a);
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;

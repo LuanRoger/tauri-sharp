@@ -1,5 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+import csharpLogo from "./assets/csharp.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Welcome to Tauri!</h1>
+      <h1>Welcome to TauriSharp!</h1>
 
       <div className="row">
         <a href="https://vitejs.dev" target="_blank">
@@ -38,9 +39,12 @@ function App() {
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        <a href="https://dotnet.microsoft.com" target="_blank">
+          <img src={csharpLogo} className="logo csharp" alt="C# logo" />
+        </a>
       </div>
 
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+      <p>Click on the Tauri, Vite, React and C# logos to learn more.</p>
 
       <form
         className="row"
