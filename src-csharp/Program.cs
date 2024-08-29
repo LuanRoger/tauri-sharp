@@ -1,4 +1,8 @@
+using TauriSharp;
 using TauriSharp.Services;
+using TauriSharp.Utils;
+
+ProgramArgs programArgs = Initialization.GetArgs(args);
 
 WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
 builder.Logging.ClearProviders();
@@ -7,5 +11,5 @@ builder.Services.AddGrpc();
 WebApplication app = builder.Build();
 
 app.MapGrpcService<GreeterService>();
-
-app.Run("http://[::1]:5030");
+        
+app.Run(programArgs.ToString());
