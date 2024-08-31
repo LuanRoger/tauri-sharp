@@ -24,6 +24,7 @@ dist-ssr
 
 # VS
 bin/
+out/
 obj/
 /packages/
 riderModule.iml
