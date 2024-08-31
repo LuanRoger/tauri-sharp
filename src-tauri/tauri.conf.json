@@ -6,7 +6,8 @@
   "build": {
     "beforeDevCommand": "start /b dotnet run --project ./src-csharp/TauriSharp.csproj && npm run dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "start dotnet build ./src-csharp/TauriSharp.csproj && npm run build",
+    "beforeBundleCommand": "start dotnet publish ./src-csharp/TauriSharp.csproj -o ../out && npm run build",
     "frontendDist": "../dist"
   },
   "app": {
@@ -32,6 +33,9 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "externalBin": [
+      "../out/TauriSharp"
     ]
   }
 }
