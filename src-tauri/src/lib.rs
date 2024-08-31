@@ -2,6 +2,7 @@ use proto::greeter_client::GreeterClient;
 use proto::HelloRequest;
 use tonic::transport::Channel;
 
+pub mod init;
 pub mod connection;
 pub mod proto;
 
@@ -28,6 +29,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
         .invoke_handler(tauri::generate_handler![greet])
+        .setup(init::init)
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
